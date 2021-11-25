@@ -1,0 +1,76 @@
+#include <stdio.h>
+ #include <math.h>
+
+
+//data load function
+
+int main(void){
+    char line[OD, Coliform, pH, DOB, Nitrate, Phosphate, Turbinity, Solids, Temperature];
+    chr column[q, ]
+    File * fpReadFile = fopen("iqa_parameters.txt", "r");  //Open file
+    
+    if (fpReadFile ==0) { //check if the file is opened otherwise error
+        printf("Erro: The file can't be read");
+        exit(-1);
+    
+    }
+    
+
+//classification index
+
+    int iqa_class(void){
+    double od, coliform, ph, dob, nitrate, phosphate, turbinity, solids, temp, qod, qcoliform, qph, qbod, qnitrate, qphosphate, qturbinity, qsolids, qtemp, qi_w;
+     char a[9]= "Excellent",
+          b[9]= "Good",
+          c[9]="Reasonable",
+          d[9]="Bad",
+          e[9]="Unnaceptable";
+    }
+          
+     
+//declaring constants
+     
+         int constant_w(void){
+         const float w_od = 
+         const float w_coliform = 0.15;
+         const float w_ph = 0.12;
+         const float w_dob = 0.1;
+         const float w_nitrate = 0.1;
+         const float w_phosphate = 0.1;
+         const float w_turbinity = 0.008;
+         const float w_solids = 0.08;
+         const float w_temp = 0.1;
+         
+         
+    }
+
+      
+          
+          
+          
+           //IQA computation
+           
+          
+          
+           
+          iqa_index = qod * qcoliform * qph * qdob * qnitrate * qphosphate * qturbinity * qsolids * qtemp;
+
+          if(iqa_index <= 100 && iqa_index > 80){
+              printf("IQA: %f Water Quality:%s\n", iqa_index, a);
+          }
+          if(iqa_index <= 80 && iqa_index > 50){
+              printf("IQA: %f Water Quality:%s\n", iqa_index, b);
+          }
+          if(iqa_index <= 50 && iqa_index > 36){
+              printf("IQA: %f Water Quality:%s\n", iqa_index, c);
+          }
+          if(iqa_index <= 36 && iqa_index > 20){
+              printf("IQA: %f Water Quality:%s\n", iqa_index, d);
+          }
+          if(iqa_index <= 20){
+              printf("IQA: %f Water Quality:%s\n", iqa_index, e);
+          }
+      return 0;
+      
+      }
+ 
