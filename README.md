@@ -1,1 +1,1 @@
-# Water-Quality-Monitoring-System
+# WQI
