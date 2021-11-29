@@ -1,37 +1,82 @@
 #include <stdio.h>
- #include <math.h>
+#include <math.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define Parameters 14
+#define Sample_Res 14
 
 
 //data load function
 
-int main(void){
-    char line[OD, Coliform, pH, DOB, Nitrate, Phosphate, Turbinity, Solids, Temperature];
-    chr column[q, ]
-    File * fpReadFile = fopen("iqa_parameters.txt", "r");  //Open file
+void readFile(struct forParameters t[20]) {
+    FILE *f1, *f2;
+    char param[20];
+    float values;
+    char c;
+    int i = 0;
+    float j= 0;
+    
+    
+    f1 = fopen("Parameters.txt", "r");
+    f2 = fopen("sample_results.txt", "r");
     
     if (fpReadFile ==0) { //check if the file is opened otherwise error
-        printf("Erro: The file can't be read");
-        exit(-1);
+        printf("Error: The file can't be read\n");
+        exit(1);
+     
     
+               
+    struct parameters_label {
+        
+        char Od[Parameters];
+        char Coliforms[Parameters];
+        char ph[Parameters];
+        char dob[Parameters];
+        char nitrate[Parameters];
+        char phosphate[Parameters];
+        char turbinity[Parameters];
+        char solids[Parameters];
+        char temp[Parameters];
+    } Parameters;
+    int main() {
+        struct parameters_label Parameters;
+        
+        float Parameters[Sample_Res].Od = ;
+        float parameter_value =
+        float parameter_value
+        float parameter_value
+        float parameter_value
+        float parameter_value
+        float parameter_value
+        float parameter_value
+        float parameter_value
+            = ;
+              = ;
+        
     }
     
+    
+    
+    //char line[OD, Coliform, pH, DOB, Nitrate, Phosphate, Turbinity, Solids, Temperature];
+   // chr column[q, ] //delete this line
 
 //classification index
 
     int iqa_class(void){
     double od, coliform, ph, dob, nitrate, phosphate, turbinity, solids, temp, qod, qcoliform, qph, qbod, qnitrate, qphosphate, qturbinity, qsolids, qtemp, qi_w;
-     char a[9]= "Excellent",
-          b[9]= "Good",
-          c[9]="Reasonable",
-          d[9]="Bad",
-          e[9]="Unnaceptable";
+     char a[8]= "Excellent",
+          b[8]= "Good",
+          c[8]="Reasonable",
+          d[8]="Bad",
+          e[8]="Unnaceptable";
     }
           
      
 //declaring constants
      
          int constant_w(void){
-         const float w_od = 
+         const float w_od =
          const float w_coliform = 0.15;
          const float w_ph = 0.12;
          const float w_dob = 0.1;
@@ -45,9 +90,6 @@ int main(void){
     }
 
       
-          
-          
-          
            //IQA computation
            
           
@@ -73,4 +115,5 @@ int main(void){
       return 0;
       
       }
+ 
  
