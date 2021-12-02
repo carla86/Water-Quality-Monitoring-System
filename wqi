@@ -144,8 +144,17 @@ int main() {
                                    
                                    
      //solids
+ 
+     if(solids > 500) {
+         qsolids = 20;
+              
+     }else {
+         qsolids = 80 * exp(- pow(solids-50,2))/2 * (pow(0.003,2));
+                            
+                            
+      }
     
-                                
+      //temperature                         
         
         
         
