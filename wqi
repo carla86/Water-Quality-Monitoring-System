@@ -149,49 +149,7 @@ int main() {
         
         
         
-        
-        
-        
-        
-        
-    }
-        
-        
-        
-        
-        
-        
-          
-     
-//declaring constants
-     
-         int constant_w(void){
-         const float w_od =
-         const float w_coliform = 0.15;
-         const float w_ph = 0.12;
-         const float w_dob = 0.1;
-         const float w_nitrate = 0.1;
-         const float w_phosphate = 0.1;
-         const float w_turbinity = 0.008;
-         const float w_solids = 0.08;
-         const float w_temp = 0.1;
-         
-         
-    }
-
-      
-          
-       //Parameters
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+    
         //IQA computation
            
           
