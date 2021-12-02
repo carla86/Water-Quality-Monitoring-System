@@ -14,8 +14,6 @@ void readFile(struct forParameters t[20]) {
     char param[20];
     float values;
     char c;
-    int i = 0;
-    float j= 0;
     
     
     f1 = fopen("Parameters.txt", "r");
@@ -26,7 +24,8 @@ void readFile(struct forParameters t[20]) {
         exit(1);
      
     
-               
+int main() {
+    
     struct parameters_label {
         
         char Od[Parameters];
@@ -39,8 +38,9 @@ void readFile(struct forParameters t[20]) {
         char solids[Parameters];
         char temp[Parameters];
     } Parameters;
-    int main() {
-        struct parameters_label Parameters;
+ 
+    
+        struct parameters_value;
         
         float Parameters[Sample_Res].Od = ;
         float parameter_value =
@@ -60,6 +60,9 @@ void readFile(struct forParameters t[20]) {
     
     //char line[OD, Coliform, pH, DOB, Nitrate, Phosphate, Turbinity, Solids, Temperature];
    // chr column[q, ] //delete this line
+        
+        
+//Parameter equations
 
 //classification index
 
@@ -70,7 +73,94 @@ void readFile(struct forParameters t[20]) {
           c[8]="Reasonable",
           d[8]="Bad",
           e[8]="Unnaceptable";
+        
+        
+        //Coliforms
+        
+        if (coliform > 10000) {
+            qcoliform = 3;
+            
+            scanf("%d", &coliform);
+            printf("Coliform concentration is too high. \n");
+            
+        } else {
+            qcoliform = (-8.723*(log10(coliform)) + 88.714);
+                
     }
+         
+       
+        //pH
+        
+        if (ph < 2) {
+            qph = 2;
+            
+        } else if (ph > 12) {
+            qph = 3;
+            
+        } else if (ph > 2 && <= 12) {
+                qph = 93 * exp(- pow(ph-7.5, 2))/2 * (pow (0.652,2));
+               
+    }
+                
+          
+        
+        //DOB
+        if (dob > 30) {
+            qdob = 2;
+            
+        } else {
+            qdob = (-30.1) * (log10(dob)) + 103.45;
+            
+    }
+    
+
+    
+      //nitrate
+      if(nitrate > 100) {
+          qnitrate = 1;
+          
+      } else {
+          qnitrate = (20.8) * (log10(nitrate)) + 93.092;
+    
+    }
+     
+      //phosphate
+        
+      if(phosphate > 10) {
+          qnitrate = 2;
+          
+      }else {
+          qnitrate = (20.8) * (log10(nitrate) + 93.092;
+                
+      }
+            
+     //turbinity
+                               
+      if(turbinity > 100){
+          qturbinity = 5;
+              
+      }else {
+          qturbinity = (-26.45) * (log10(turbinity) + 136.37;
+                                   
+                                   
+     //solids
+    
+                                
+        
+        
+        
+        
+        
+        
+        
+        
+    }
+        
+        
+        
+        
+        
+        
           
      
 //declaring constants
@@ -90,7 +180,19 @@ void readFile(struct forParameters t[20]) {
     }
 
       
-           //IQA computation
+          
+       //Parameters
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        //IQA computation
            
           
           
@@ -116,4 +218,5 @@ void readFile(struct forParameters t[20]) {
       
       }
  
+
  
