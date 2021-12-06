@@ -73,6 +73,18 @@ int main() {
           c[8]="Reasonable",
           d[8]="Bad",
           e[8]="Unnaceptable";
+          
+          
+        //OD
+        
+        if(od >140) {
+            qod = 50;
+            
+        }else {
+        
+        qod = 100 * exp(-pow(od-100,2))/2 * (pow(0.025,2));
+      
+      }
         
         
         //Coliforms
