@@ -154,7 +154,10 @@ int main() {
                             
       }
     
-      //temperature                         
+      //temperature  
+      
+      qtemp = = 92 * exp(-pow(temp - 0, 2))/2 * (pow(0.25,2));
+        
         
         
         
