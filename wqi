@@ -168,9 +168,15 @@ int main() {
     
       //temperature  
       
+      if(temp > 15) {
+            qtemp = 9;
+            
+      } else {
+      
       qtemp = = 92 * exp(-pow(temp - 0, 2))/2 * (pow(0.25,2));
         
-        
+     
+      }
         
         
     
